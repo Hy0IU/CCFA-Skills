@@ -16,6 +16,8 @@ This workflow adapts useful primitives from public research agents: question dec
 
 ## Compact Research Memory
 
+When a project method library exists, use its `index.md` to select source-version-matched cards and condense only the relevant primitives into the working memory below. Keep the full, updateable paper account in `ccf-paper-to-method` cards; refresh a partial or changed card when its missing detail affects a design decision. Use the compatibility and bridge-mechanism rules in `../ccf-paper-to-method/references/handoff-contract.md` before combining a card with the base idea.
+
 Create no more than 4 evidence cards in quick mode, 8 in a normal standard task, or 12 for a genuinely multi-cluster topic. Each card contains:
 
 ```text

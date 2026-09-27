@@ -1,8 +1,8 @@
 schema_version: 4
-generated_at: 2026-09-16
+generated_at: 2026-09-27
 authority: SKILL.md wins if this registry conflicts with a skill body.
 naming_policy: canonical runtime names use ccf-<object>-<role/action>; ccf-common is the governance exception.
-runtime_skill_count: 17
+runtime_skill_count: 18
 # Triggers/exclusions define primary ownership. Handoffs also support prerequisite
 # resolution and targeted checks; routing.md governs integration and scope.
 skills:
@@ -21,7 +21,7 @@ skills:
   - name: ccf-idea-optimizer
     trigger: "Develop and optimize rough CCF research ideas into problems, insights, mechanisms, and evidence plans. Use for 优化idea, 具象化idea, 找方向, 方向探索, and rescue routes when development is the requested deliverable. Judging whether an idea is worthwhile, novel, or coherent belongs to ccf-idea-reviewer even without scores; manuscript edits belong to ccf-paper-writer."
     exclude: "Does not rank or score multiple ideas as the main task."
-    handoff: "ccf-idea-reviewer, ccf-literature-monitor, ccf-literature-searcher, ccf-experiment-designer, ccf-paper-writer"
+    handoff: "ccf-paper-to-method, ccf-idea-reviewer, ccf-literature-monitor, ccf-literature-searcher, ccf-experiment-designer, ccf-paper-writer"
   - name: ccf-idea-reviewer
     trigger: "Assess research ideas for value, novelty, insight, and mechanism. Use for 思路审核, 靠谱吗, 值得做吗, 创新够不够, idea review, scoring, and ranking; no numeric-score request is needed. Default to concept-only review without experiment assessment, including ideas extracted from manuscripts. Developing an idea belongs to ccf-idea-optimizer; evaluating manuscript evidence or writing belongs to ccf-paper-reviewer."
     exclude: "Does not develop ideas as the main deliverable or assess manuscript prose; experiment assessment is outside default scope. Qualitative concept judgment does not require scores."
@@ -33,7 +33,11 @@ skills:
   - name: ccf-literature-searcher
     trigger: "Find and verify external literature, prior art, datasets, benchmarks, and citation candidates. Use for 文献检索, 相关工作, benchmark搜索, and research opportunity maps. Recurring recent-paper watch belongs to ccf-literature-monitor; existing-citation audits, manuscript assessment, and result schemas have separate owners."
     exclude: "Does not own supplied-result table schemas, experiment evidence structure, full manuscript review, already-cited-only audits, or manuscript writing."
-    handoff: "ccf-idea-optimizer, ccf-idea-reviewer, ccf-experiment-designer, ccf-paper-writer, ccf-paper-reviewer, ccf-integrity-auditor"
+    handoff: "ccf-paper-to-method, ccf-idea-optimizer, ccf-idea-reviewer, ccf-experiment-designer, ccf-paper-writer, ccf-paper-reviewer, ccf-integrity-auditor"
+  - name: ccf-paper-to-method
+    trigger: "Turn user-supplied research papers or PDFs into persistent, updateable Markdown method cards and a searchable method library. Use for 论文方法库, 逐篇方法整理, 方法机制提取, paper-to-method, and updating earlier paper cards. Idea generation belongs to ccf-idea-optimizer; writing exemplars belong to ccf-paper-to-exemplar."
+    exclude: "Does not generate the final framework idea, extract writing exemplars, or discover external literature as the main task."
+    handoff: "ccf-idea-optimizer, ccf-literature-searcher"
   - name: ccf-experiment-designer
     trigger: "Design CCF experiment protocols and evidence schemas: datasets, baselines, metrics, ablations, and result-table contents. Use for 设计实验, 消融, benchmark planning, and 结果表证据结构. Preserve real values. Table styling/rendering belongs to ccf-visual-composer; broad retrieval belongs to ccf-literature-searcher."
     exclude: "Does not invent results, draw docs diagrams, search literature as the main deliverable, or improve layout/colors/readability of an already specified table/figure."

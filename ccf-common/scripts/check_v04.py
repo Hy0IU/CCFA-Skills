@@ -39,6 +39,7 @@ EXPECTED_SKILLS = {
     "ccf-skill-forger",
     "ccf-submission-checker",
     "ccf-paper-to-exemplar",
+    "ccf-paper-to-method",
 }
 
 
@@ -167,7 +168,7 @@ def check_registry(skill_names: list[str], errors: list[str]) -> None:
     if not registered_order or registered_order[0] != "ccf-humanization":
         fail(errors, "ccf-humanization must be the first registry entry")
     if data.get("runtime_skill_count") != len(EXPECTED_SKILLS):
-        fail(errors, "skill-trigger-registry runtime_skill_count must be 17")
+        fail(errors, f"skill-trigger-registry runtime_skill_count must be {len(EXPECTED_SKILLS)}")
 
 
 def check_venue_guides(errors: list[str]) -> None:

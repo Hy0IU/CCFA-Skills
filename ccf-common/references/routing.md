@@ -14,10 +14,11 @@ Resolve common collisions by the requested deliverable:
 
 - Revised, polished, compressed, or newly drafted prose -> `ccf-paper-writer`; assessment, scoring, issue diagnosis, or version comparison without rewriting -> `ccf-paper-reviewer`. If the request says full review, scientific review, scoring, assessment-only, or no rewrite, choose reviewer.
 - External source discovery -> `ccf-literature-searcher`; end-to-end manuscript assessment remains `ccf-paper-reviewer`, which may request search only when current evidence is actually needed. Supplied-result evidence schemas and result-table structure belong to `ccf-experiment-designer`, not search.
+- Persistent, per-paper method cards from supplied sources -> `ccf-paper-to-method`; the method library feeds `ccf-idea-optimizer` for compatibility and framework development. Writing-pattern extraction remains with `ccf-paper-to-exemplar`.
 - Datasets, baselines, metrics, ablations, evidence schemas, and what a result table should contain -> `ccf-experiment-designer`; plotting, styling, layout, rendering, result-table color/readability improvement, or editable reconstruction from supplied content/values -> `ccf-visual-composer`.
 - `ccf-humanization` is the mandatory first preflight for every CCFA skill; its baseline also applies to planning, retrieval, review, audit, and visuals. Prose rewriting and detailed experiment checks run only when applicable and authorized. It does not take over the specialist's artifact or soften evidence-backed criticism.
 
-The current runtime surface contains 17 installable `ccf-*` skills plus the LaTeX/template reference tree. Removed helper names must not be installed as standalone skills.
+The current runtime surface contains 18 installable `ccf-*` skills plus the LaTeX/template reference tree. Removed helper names must not be installed as standalone skills.
 
 ## Priority Overlay
 
@@ -36,6 +37,7 @@ Humanization removes empty self-defense while preserving material facts, rigorou
 | Assess research value, novelty, insight, and mechanism, including natural qualitative judgments without scores. | `ccf-idea-reviewer` | concept assessment, idea scoring/ranking, stage-aware triage | Experiments are outside default scope; development and manuscript evidence review have separate owners. |
 | Monitor recent papers, arXiv/OpenReview/venue feeds, labs, competitors, and recurring novelty threats. | `ccf-literature-monitor` | arxiv-watch, venue-watch, novelty-check, trend-scouting, competitor-tracking | Does not replace deep related-work search, citation audit, or final idea scoring. |
 | Search literature, prior art, datasets, benchmarks, citation evidence, and opportunity gaps. | `ccf-literature-searcher` | search, screening, opportunity map | Does not audit only already cited papers or act as a final idea kill gate. |
+| Convert supplied papers into persistent, updateable method cards and a mechanism lookup index. | `ccf-paper-to-method` | paper method extraction, card update, method-library handoff | Does not own final idea generation, writing exemplars, or broad literature discovery. |
 | Design experiments and real-result tables/figures. | `ccf-experiment-designer` | experiment design, result templates, result figures/tables | Does not invent results. |
 | Compose publication-grade data figures/tables and scientific method/architecture diagrams, using GPT Image 2 as the default architecture/schematic renderer, followed by requested editable SVG/PDF/PPTX reconstruction or an optional offer; use pure SVG first only on explicit opt-out. | `ccf-visual-composer` | visual-contract, figure-design, architecture-generation, pure-svg-generation, editable-reconstruction, python-plotting, table-design, layout-integration, render-qa | Does not design experiments, invent results/components, write manuscript prose, or perform final submission compliance. |
 | Draft, revise, polish, compress, and presentation-adapt paper text. | `ccf-paper-writer` | writing, polishing, compression, venue-aware LaTeX drafting, slides/poster/talk/Q&A | Preserves user format for edits; does not run full review or rebuttal. |
@@ -108,6 +110,7 @@ For manuscript writing from only an idea, `ccf-paper-writer` checks the venue gu
 | 先判断思路是否值得做，再帮我完善 | `ccf-idea-reviewer`, then `ccf-idea-optimizer` |
 | 监控竞品 / 追踪新论文 / 最近有没有类似 idea | `ccf-literature-monitor` |
 | 搜索 related work、benchmark 和还有哪些 open gap | `ccf-literature-searcher` |
+| 把这些论文的方法逐篇整理为可更新的方法库 / 从 PDF 提取可迁移机制 | `ccf-paper-to-method` |
 | 设计对比实验、消融和结果表 | `ccf-experiment-designer` |
 | 根据真实结果规划论文图表的数据和证据结构 | `ccf-experiment-designer` |
 | 优化图表排版 / 选择论文配色 / 多面板 figure 放正文里 | `ccf-visual-composer` |
