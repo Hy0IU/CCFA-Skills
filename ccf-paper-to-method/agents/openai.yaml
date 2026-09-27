@@ -1,0 +1,4 @@
+interface:
+  display_name: "CCF Paper to Method"
+  short_description: "Build and update reusable paper method cards"
+  default_prompt: "Use $ccf-paper-to-method to read my supplied papers, update the method library, and preserve source-grounded mechanisms for later idea development."
