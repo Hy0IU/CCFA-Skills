@@ -16,7 +16,9 @@ This workflow adapts useful primitives from public research agents: question dec
 
 ## Compact Research Memory
 
-When a project method library exists, use its `index.md` to select source-version-matched cards and condense only the relevant primitives into the working memory below. Keep the full, updateable paper account in `ccf-paper-to-method` cards; refresh a partial or changed card when its missing detail affects a design decision. Use the compatibility and bridge-mechanism rules in `../ccf-paper-to-method/references/handoff-contract.md` before combining a card with the base idea.
+When a project method library exists, use its `index.md` to select relevant architecture-focused cards and condense only the module roles and interactions needed for this idea into the working memory below. Keep source-grounded paper accounts in `ccf-paper-to-method` cards and idea-derived lessons in the idea workspace described by `persistent-idea-memory.md`. A partial or changed card is a source question to resolve in a paper-processing task; idea discussion does not rewrite it. Use the compatibility and bridge-mechanism rules in `../ccf-paper-to-method/references/handoff-contract.md` before combining a card with the base idea.
+
+For early architecture-led ideation from these cards, do not retrieve paper experiments merely to fill result or protocol fields in the compact evidence-card format. Keep such fields unknown until they are needed for a later evidence or implementation decision.
 
 Create no more than 4 evidence cards in quick mode, 8 in a normal standard task, or 12 for a genuinely multi-cluster topic. Each card contains:
 

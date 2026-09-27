@@ -19,7 +19,7 @@ skills:
     exclude: "Does not create folders/templates as the main task or perform downstream writing, review, search, experiment design, or rebuttal."
     handoff: "All owning workflow skills"
   - name: ccf-idea-optimizer
-    trigger: "Develop and optimize rough CCF research ideas into problems, insights, mechanisms, and evidence plans. Use for 优化idea, 具象化idea, 找方向, 方向探索, and rescue routes when development is the requested deliverable. Judging whether an idea is worthwhile, novel, or coherent belongs to ccf-idea-reviewer even without scores; manuscript edits belong to ccf-paper-writer."
+    trigger: "Develop and optimize rough CCF research ideas into problems, insights, mechanisms, and evidence plans, and maintain persistent idea documents and research memory as new papers arrive. Use for 优化idea, 具象化idea, 找方向, 方向探索, 持续更新idea, and rescue routes when development is the requested deliverable. Judging whether an idea is worthwhile, novel, or coherent belongs to ccf-idea-reviewer even without scores; manuscript edits belong to ccf-paper-writer."
     exclude: "Does not rank or score multiple ideas as the main task."
     handoff: "ccf-paper-to-method, ccf-idea-reviewer, ccf-literature-monitor, ccf-literature-searcher, ccf-experiment-designer, ccf-paper-writer"
   - name: ccf-idea-reviewer
@@ -35,8 +35,8 @@ skills:
     exclude: "Does not own supplied-result table schemas, experiment evidence structure, full manuscript review, already-cited-only audits, or manuscript writing."
     handoff: "ccf-paper-to-method, ccf-idea-optimizer, ccf-idea-reviewer, ccf-experiment-designer, ccf-paper-writer, ccf-paper-reviewer, ccf-integrity-auditor"
   - name: ccf-paper-to-method
-    trigger: "Turn user-supplied research papers or PDFs into persistent, updateable Markdown method cards and a searchable method library. Use for 论文方法库, 逐篇方法整理, 方法机制提取, paper-to-method, and updating earlier paper cards. Idea generation belongs to ccf-idea-optimizer; writing exemplars belong to ccf-paper-to-exemplar."
-    exclude: "Does not generate the final framework idea, extract writing exemplars, or discover external literature as the main task."
+    trigger: "Turn user-supplied research papers or PDFs into persistent, updateable Markdown cards focused on overall model architecture, module roles, design rationale, and interactions. Use for 论文方法库, 逐篇方法整理, 方法机制提取, paper-to-method, and updating earlier paper cards. Idea generation belongs to ccf-idea-optimizer; writing exemplars belong to ccf-paper-to-exemplar."
+    exclude: "Does not extract experimental results or implementation details by default, generate the final framework idea, extract writing exemplars, or discover external literature as the main task."
     handoff: "ccf-idea-optimizer, ccf-literature-searcher"
   - name: ccf-experiment-designer
     trigger: "Design CCF experiment protocols and evidence schemas: datasets, baselines, metrics, ablations, and result-table contents. Use for 设计实验, 消融, benchmark planning, and 结果表证据结构. Preserve real values. Table styling/rendering belongs to ccf-visual-composer; broad retrieval belongs to ccf-literature-searcher."

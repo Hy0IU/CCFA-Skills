@@ -1,4 +1,4 @@
 interface:
   display_name: "CCF Idea Optimizer"
-  short_description: "Turn rough CCF research directions into concrete problem, gap, insight, method, novelty, and evidence plans."
-  default_prompt: "Use $ccf-idea-optimizer to develop the research problem, causal insight, mechanism, and minimum convincing evidence. Ground novelty when needed, explore meaningful alternatives, and keep unrequested numeric scoring out of the result."
+  short_description: "Develop research ideas and maintain persistent idea memory"
+  default_prompt: "Use $ccf-idea-optimizer to develop and persist my research idea, reuse relevant paper architecture cards, and update the idea memory as new papers and decisions arrive. Ground novelty when needed and keep unrequested numeric scoring out of the result."
