@@ -1,4 +1,4 @@
 interface:
   display_name: "CCF Paper to Method"
-  short_description: "Build architecture-focused, reusable paper method cards"
-  default_prompt: "Use $ccf-paper-to-method to capture my supplied papers' overall model architecture, module roles, design rationale, interactions, and transfer conditions in the method library, with source anchors and source/inference distinctions."
+  short_description: "Explain paper architectures in reusable method cards"
+  default_prompt: "Use $ccf-paper-to-method to explain my supplied papers' model architectures in self-contained method cards. Make each module's purpose, operation, and handoff understandable without reopening the PDF; keep concise source anchors and distinguish paper claims from analysis and unknowns."
